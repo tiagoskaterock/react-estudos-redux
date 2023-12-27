@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
+import Fruta from "./Fruta"
+import frutas from "../data/frutasData"
 
-function ListaFrutas(fruta) {
+function ListaFrutas() {
   return (
-    <div className="fruta">
-	    <ul>
-	    	<li>
-	    		<strong>Fruta: {fruta.nome}</strong>
-	    	</li>
-
-	    	<li>
-	    		<strong>Quantidade.: {fruta.quantidade}</strong>
-	    	</li>
-	    </ul>
-
-	    <button onClick={ () => alert(fruta.id) }>Rmover</button>
-    </div>
+    <>
+    	<h1>Lista</h1>
+    	{	
+    		frutas.map(fruta => 
+    			( 
+    			<Fruta 
+    				nome={fruta.nome} key={fruta.id} id={fruta.id} qtd={fruta.qtd}
+    			/> 
+    			)
+    		)
+    	}
+    </>
   );
 }
 

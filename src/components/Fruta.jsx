@@ -1,19 +1,19 @@
 import React from 'react';
 
-function Fruta(fruta) {
+function Fruta(props) {	
   return (
     <div className="fruta">
 	    <ul>
 	    	<li>
-	    		<strong>Fruta: {fruta.nome}</strong>
+	    		<strong>Fruta: {props.nome}</strong>
 	    	</li>
 
 	    	<li>
-	    		<strong>Quantidade.: {fruta.quantidade}</strong>
+	    		<strong>Quantidade: {props.qtd}</strong>
 	    	</li>
 	    </ul>
 
-	    <button onClick={ () => alert(fruta.id) }>Rmover</button>
+	    <button onClick={ () => alert(props.id) }>Remover</button>
     </div>
   );
 }
