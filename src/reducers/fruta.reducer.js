@@ -7,14 +7,14 @@ const INITIAL_STATE = {
 	]
 }
 
-const reducers = {state = INITIAL_STATE, action} => {
-	if(action.type == 'ADICIONAR_FRUTA') {
-		return { frutas: [..state.frutas, {...action.payload}] }
-	}
-	elseif(action.type == 'REMOVER_FRUTA') {
-		return { frutas: state.frutas.filter( x => x.id !== action.payload.id ) }
-	}
-	return state
-}
+const reducers = (state = INITIAL_STATE, action) => {
+    if (action.type === 'ADICIONAR_FRUTA') {
+        return { frutas: [...state.frutas, {...action.payload}] };
+    } else if (action.type === 'REMOVER_FRUTA') {
+        return { frutas: state.frutas.filter(x => x.id !== action.payload.id) };
+    }
+    return state;
+};
+
 
 export { reducers }
