@@ -16,5 +16,4 @@ const reducers = (state = INITIAL_STATE, action) => {
     return state;
 };
 
-
 export { reducers }

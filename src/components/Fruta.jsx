@@ -1,19 +1,22 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'
+import { actions } from '../actions/frutas.action'
 
-function Fruta(props) {	
+function Fruta(fruta) {	
+	const dispatch = useDispatch()
   return (
     <div className="fruta">
 	    <ul>
 	    	<li>
-	    		<strong>Fruta: {props.nome}</strong>
+	    		<strong>Fruta: {fruta.nome}</strong>
 	    	</li>
 
 	    	<li>
-	    		<strong>Quantidade: {props.qtd}</strong>
+	    		<strong>Quantidade: {fruta.qtd}</strong>
 	    	</li>
 	    </ul>
 
-	    <button onClick={ () => alert(props.id) }>Remover</button>
+	    <button onClick={ () => dispatch(actions.remover(fruta)) }>Remover</button>
     </div>
   );
 }

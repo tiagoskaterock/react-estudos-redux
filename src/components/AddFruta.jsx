@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
+import { actions } from '../actions/frutas.action'
 
 function AddFruta() {
 	
@@ -9,11 +11,13 @@ function AddFruta() {
 			nome,
 			qtd
 		}
-		console.log('addNova', fruta)
+		dispatch(actions.adicionar(fruta))
 	}
 
 	const [nome, setNome] = useState('')
 	const [qtd, setQtd] = useState(0)
+
+	const dispatch = useDispatch()
 
   return (
     <form onSubmit={addNova}>
