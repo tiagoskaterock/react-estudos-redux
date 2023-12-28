@@ -37,7 +37,7 @@ function AddFruta() {
     		required 
     		onChange={ event => setQtd(event.target.value) } 
     	/>
-
+    	<br />
     	<button type="submit">Adicionar</button>
     </form>
   );

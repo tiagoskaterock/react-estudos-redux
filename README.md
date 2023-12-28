@@ -35,3 +35,7 @@ Nosso objetivo é mergulhar de cabeça no universo do gerenciamento de estado co
 Este projeto é um espetáculo coletivo! Se quiser contribuir com novos passos de dança, ajustes de iluminação ou apenas bater palmas, fique à vontade! Todo tipo de feedback e contribuição é bem-vindo para deixar nosso show ainda mais incrível.
 
 Preparem-se para um espetáculo cheio de aprendizado, diversão e muito Redux & React! 🎪🎩✨
+
+<p align="center">
+  <img src="1.gif" alt="App" />
+</p>
